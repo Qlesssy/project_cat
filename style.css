@@ -289,7 +289,7 @@ ol li {
 /* Изменение кнопки "Подружиться" при наведении */
 .btn-friend:hover {
     background: #4a44c0;
-    border-color: white;
+    border-color: #4a44c0;
     color: white;
     font-weight: 700;
     transform: scale(1.05);
