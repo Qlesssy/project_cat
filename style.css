@@ -1,0 +1,324 @@
+/* Глобальные стили для всех элементов */
+* {
+    font-family: "Montserrat", serif; /* Основной шрифт */
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Стили для body */
+body {
+    background-color: #c0c6dc; /* Цвет фона */
+    margin: 0px; /* Убираем отступы */
+}
+
+/* Стили для боковой панели */
+aside {
+    background: rgba(224, 235, 254, 0.7); /* Полупрозрачный фон */
+    border-radius: 40px; /* Скругление углов */
+    width: 1200px; /* Ширина */
+    height: 1206px; /* Высота */
+}
+
+/* Стили для заголовков h2 */
+h2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+    color: #1f2937; /* Цвет заголовка */
+}
+
+/* Стили для заголовков h1 */
+h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 122%;
+    color: #1f2937;
+    margin: 0px;
+}
+
+/* Общие стили для параграфов */
+p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%; /* Межстрочный интервал */
+    color: #4a5161;
+}
+
+/* Стили для маркированного списка */
+ul {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #4a5161;
+}
+
+/* Стили для нумерованного списка */
+ol {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 171%;
+    color: #1f2937;
+    list-style-type: decimal; /* Нумерация */
+    padding-left: 20px; /* Отступ слева */
+}
+
+/* Жирный текст внутри списка */
+ol > li > strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Вложенные списки внутри ol */
+ol ul {
+    font-weight: 400;
+    color: #1f2937;
+    list-style-type: disc; /* Маркированный список */
+    padding-left: 20px;
+}
+
+/* Стили ссылок в списке */
+ol a {
+    font-weight: 700;
+    color: #5a2ec9;
+    text-decoration: underline;
+}
+ol a, .info a {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Стили ссылок при наведении */
+ol a:hover {
+    color: #422391;
+    text-decoration: underline;
+}
+ol a:hover, .info a:hover {
+    color: #4d27ac;
+    text-shadow: 1px 1px 5px rgba(141, 107, 226, 0.4);
+}
+
+/* Стили для элементов списка */
+ol li {
+    font-weight: 400;
+    color: #1f2937;
+    margin-bottom: 8px; /* Отступ между пунктами */
+}
+
+/* Дополнительные стили для текста */
+.p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #4a5161;
+}
+
+/* Стили для email-ссылок */
+.pe {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #7549ea;
+}
+
+/* Стили блока информации */
+.info {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%; /* Межстрочный интервал */
+    color: #1f2937;
+}
+
+/* Ссылки внутри блока .info */
+.info a {
+    font-weight: 400;
+    color: #5a2ec9;
+    text-decoration: underline;
+}
+
+/* Стили ссылок при наведении внутри .info */
+.info a:hover {
+    color: #331480;
+    text-decoration: underline;
+}
+
+/* Отступ сверху у блока "Мои друзья" */
+.my_friend {
+    margin-top: 48px;
+}
+
+/* Отступ сверху у блока "Интересы" */
+.interests {
+    margin-top: 48px;
+}
+
+
+/* Стили для числового счетчика друзей */
+.text1 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    color: #4a5161;
+    padding-left: 8px;
+}
+
+/* Основной контейнер */
+.wrapper {
+    border-radius: 40px;
+    width: 1200px;
+    height: 1206px;
+    background: #fff; /* Белый фон */
+    margin: 27px auto; /* Центрируем */
+    display: flex;
+    padding: 13px 18px;
+    gap: 60px; /* Отступы между элементами */
+}
+
+/* Контейнер интересов */
+.interest {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+}
+
+/* Элементы интересов */
+.interest p {
+    border-radius: 6px;
+    padding: 0px 8px;
+    min-width: 45px;
+    height: 24px;
+    background: rgba(117, 73, 234, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #7549ea;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* При наведении на интерес */
+.interest p:hover {
+    background: rgba(117, 73, 234, 0.4);
+    color: #5a36b8;
+    cursor: pointer;
+    transform: translateY(-1px) scale(1.1);
+}
+
+/* Внутренние отступы боковой панели */
+.aside-box {
+    padding: 40px;
+}
+
+/* Стили для аватарок друзей */
+.offce {
+    position: relative;
+    display: inline-block;
+    margin-right: -23px;
+    z-index: 1;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+/* Изображения друзей */
+.offce img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    border: 2px solid white;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+    outline: none;
+    border: none;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Анимация при наведении */
+.offce:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+/* Изменение изображения при наведении */
+.offce:hover img {
+    transform: scale(1.1);
+    border-radius: 20%;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Контейнер для кнопок */
+.buttons-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Общие стили для кнопок */
+.buttons-box button {
+    border-radius: 16px;
+    padding: 14px 16px;
+    width: 290px;
+    height: 48px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Кнопка "Подружиться" */
+.btn-friend {
+    background: #7549ea;
+    border: white;
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+}
+
+/* Кнопка "Позвать на прогулку" */
+.btn-walk {
+    background: rgba(224, 235, 254, 0.7);
+    border: #7549ea;
+    color: #7549ea;
+    border: 2px solid #7549ea;
+    font-weight: 700;
+}
+
+/* Изменение кнопки "Подружиться" при наведении */
+.btn-friend:hover {
+    background: #4a44c0;
+    border-color: white;
+    color: white;
+    font-weight: 700;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Изменение кнопки "Позвать на прогулку" при наведении */
+.btn-walk:hover {
+    background: rgb(255 255 255 / 98%);
+    border-color: #7549ea;
+    color: #7549ea;
+    font-weight: 700;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-friend:active, .btn-walk:active{
+    transform: scale(0.95);
+}
+
+/* Выделенный текст */
+.highlight {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Стили для заголовка профиля */
+.title.box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
